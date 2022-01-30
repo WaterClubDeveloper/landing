@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="full-screen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WaterClub">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" type="image/png" href="/app/icons/favicon.png">
+  <link rel="manifest" href="/_manifest.json" data-pwa-version="3.10">
+  <link rel="apple-touch-icon" sizes="180x180" href="/app/icons/w-icon-192x192.png">
+  <title>WaterClub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="A6LDmWAOo2sfXFXycy9PX-tXIMHkyhcF_PteOatStkK16H9IlP7DkmzL5-6oWI3R69sYQidoq6WsAKHJUrsK9g" />
+  
+
+  <script src="https://shop-waterclub.cf04.aclambda.online/cookie/glowCookies.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="https://shop-waterclub.cf04.aclambda.online/fonts/css/fontawesome-all.min.css">    
+  <link rel="stylesheet" type="text/css" href="https://shop-waterclub.cf04.aclambda.online/cookie/glowCookies.css">    
+  
+  <script>
+    var cookieAllowed = false;
+    function startCookieBanner(){
+    glowCookies.start('it', { 
+        style: 1,
+        facebookPixel: '',
+        hideAfterClick: true,
+        border: 'none',
+        position: 'right',
+        policyLink: 'https://shop-waterclub.cf04.aclambda.online/cookiepolicy',
+        customScript: [{ type: 'custom', position: 'body', content: `cookieAllowed=true;profileAllowed();` }],
+        bannerDescription: 'I cookie ci aiutano a fornire i nostri servizi. Utilizzando tali servizi, accetti l\'utilizzo dei cookie da parte nostra.',
+        bannerLinkText: 'Cookie Policy',
+        bannerHeading: '<h2>Consento l\'utilizzo di Cookie</h2>',
+        acceptBtnText: 'Accetto',
+        acceptBtnColor: 'white',
+        rejectBtnText: 'Rifiuto',
+        rejectBtnBackground: 'transparent',
+        rejectBtnColor: 'gray',
+        manageColor: 'white',
+        manageBackground: 'blue',
+        manageText: 'Gestisci Cookie'
+    });
+    }
+    startCookieBanner();
+    function profileAllowed(){
+      if (cookieAllowed){
+        console.log("cookie are allowed")
+      }else{
+        
+      }
+    }
+</script>
+
+  <!-- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 -->
+  <!-- desktop -->
+  <style>
+
+.splide__pagination{
+  bottom:-1.5em;
+}
+  .categories-home {
+    color: white; 
+  }
+
+  .bg-home {
+    background-image: url(/img/home_dsk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .bg-home2 {
+    background-image: url(/img/home2.jpg);
+    background-size: contain;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+}
+
+.bg-home3 {
+    background-image: url(/img/home3.jpg);
+    background-size: contain;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+}
+
+.card-style-home {
+  margin:0px;
+}
+
+  .divider-margins{
+    margin-top:-5px;
+  }
+
+  .home-text {
+    color: #000000;
+    font-size:24px;
+  }
+
+  .page-title {
+    border-radius: 5px 5px 0pc 0px;
+  }
+
+  #page{
+    background:inherit;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    position: relative;
+    margin-top:10px;
+  }
+  #page:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+  }
+
+body {
+  margin: 0;
+}
+
+.breadcrumb-item a, .breadcrumb-item.active, .breadcrumb-item + .breadcrumb-item::before {
+  color: white !important;
+}
+
+.add-btn{
+    float: none !important;
+    margin-right: 0px;
+}
+
+.stepper-list {
+    float: none !important;
+    margin-right: 0px;
+}
+
+@keyframes animateSprite {
+  0% {
+    background-position: -600px; /* Starting position moving left sprite */
+  }
+  20% {
+    background-position: 0px; /* Straight on sprite */
+  }
+  25% {
+    background-position: -200px; /* Moving up sprite */
+  }
+  35% {
+    background-position: -400px; /* Moving right sprite */
+  }
+  40% {
+    background-position: -400px;
+  }
+  50% {
+    background-position: -200px;  /* Moving up sprite */
+  }
+  60% {
+    background-position: -0px; /* Straight on sprite */
+  }
+  67% {
+    background-position: -600px; /* Moving up sprite */
+  }
+
+  100% {
+    background-position: -600px;
+  }
+}
+
+@keyframes swim {
+  0% {
+    transform: translate(0, 0); /* Starting position */
+  }
+  20% {
+    transform: translate(calc(-50vw - 100px), 0); /* Animate to center of screen */
+  }
+  25% {
+    transform: translate(calc(-50vw - 100px), 0); /* Stay at the center for 1 second */
+  }
+  35% {
+    transform: translate(calc(-50vw - 100px), -20vh); /* Animate up for 2 seconds */
+  }
+  50% {
+    transform: translate(-25vw, 15vh); /* Animate bottom right for 3 seconds */
+  }
+  60% {
+    transform: translate(-25vw, -20vh); /* Animate up at right of the screen */
+  }
+  67% {
+    transform: translate(-25vw, -20vh);
+  }
+
+  100% {
+    transform: translate(calc(-100vw - 300px), 0); /* Animate past left past the screen */
+  }
+}
+
+.ocean {
+  position: absolution;
+  width: 100vw;
+  height: 100%;
+  background-image: linear-gradient(0deg, #182848, #2980b9)
+}
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: white;
+  bottom: -30px;
+  opacity: 0.2;
+  animation: bubble 15s ease-in-out infinite,
+    sideWays 4s ease-in-out infinite alternate;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.06;
+  }
+  100% {
+    transform: translateY(-120vh);
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 200px;
+  }
+}
+
+.bubble--1 {
+  left: 10%;
+  animation-delay: 0.5s;
+  animation-duration: 16s;
+  opacity: 0.2;
+}
+
+.bubble--2 {
+  width: 15px;
+  height: 15px;
+  left: 40%;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  opacity: 0.1;
+}
+
+.bubble--3 {
+  width: 10px;
+  height: 10px;
+  left: 30%;
+  animation-delay: 5s;
+  animation-duration: 20s;
+  opacity: 0.3;
+}
+
+.bubble--4 {
+  width: 25px;
+  height: 25px;
+  left: 40%;
+  animation-delay: 8s;
+  animation-duration: 17s;
+  opacity: 0.2;
+}
+
+.bubble--5 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  animation-delay: 10s;
+  animation-duration: 15s;
+  opacity: 0.1;
+}
+
+.bubble--6 {
+  width: 10px;
+  height: 10px;
+  left: 80%;
+  animation-delay: 3s;
+  animation-duration: 30s;
+  opacity: 0.4;
+}
+
+.bubble--7 {
+  width: 15px;
+  height: 15px;
+  left: 90%;
+  animation-delay: -7s;
+  animation-duration: 25s;
+  opacity: 0.3;
+}
+
+.bubble--9 {
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  bottom: 30px;
+  animation-delay: -5s;
+  animation-duration: 19s;
+  opacity: 0.2;
+}
+
+.bubble--10 {
+  width: 40px;
+  height: 40px;
+  left: 30%;
+  bottom: 30px;
+  animation-delay: -21s;
+  animation-duration: 16s;
+  opacity: 0.3;
+}
+
+.bubble--11 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  bottom: 30px;
+  animation-delay: -13.75s;
+  animation-duration: 20s;
+  opacity: 0.3;
+}
+
+.bubble--11 {
+  width: 25px;
+  height: 25px;
+  left: 90%;
+  bottom: 30px;
+  animation-delay: -10.5s;
+  animation-duration: 19s;
+  opacity: 0.3;
+}
+
+  </style>
+<meta name="apple-mobile-web-app-capable" content="yes"></head>
+
+<body class="theme-light">
+
+ <div class="ocean">
+  <div class="bubble bubble--1"></div>
+  <div class="bubble bubble--2"></div>
+  <div class="bubble bubble--3"></div>
+  <div class="bubble bubble--4"></div>
+  <div class="bubble bubble--5"></div>
+  <div class="bubble bubble--6"></div>
+  <div class="bubble bubble--7"></div>
+  <div class="bubble bubble--8"></div>
+  <div class="bubble bubble--9"></div>
+  <div class="bubble bubble--10"></div>
+  <div class="bubble bubble--11"></div>
+  <div class="bubble bubble--12"></div>
+</div>
+
+<div id="page">
+  <div class="notice" style="position:absolute"></div>
+<div class="alert"  style="position:absolute"></div>
+
+<div class="header header-auto-show header-logo-left mb-3 shadow-l ">
+<a href="/" class="header-logo logo">WaterClub</a>
+<a class="header-icon header-icon-3" href="/cart">
+  <i class="fa fa-shopping-cart"></i>
+    <span class="badge bg-primary cart-update" id="cart-update1">1</span>
+</a>
+<a class="header-icon header-icon-2" href="/profile">
+  <i class="fa fa-user"></i>
+</a>
+<a href="#" class="header-icon header-icon-1" data-menu="menu-main-right"><i class="fa fa-bars"></i></a>
+</div>
+
+
+<!-- div id="footer-bar" class="footer-bar-6">
+  <a href="index-components.html"><i class="fa fa-layer-group"></i><span>Features</span></a>
+  <a href="index-pages.html" class="active-nav"><i class="fa fa-file"></i><span>Pages</span></a>
+  <a href="index.html" class="circle-nav"><i class="fa fa-home"></i><span>Welcome</span></a>
+  <a href="index-projects.html"><i class="fa fa-camera"></i><span>Projects</span></a>
+  <a href="#" data-menu="menu-main-right"><i class="fa fa-bars"></i><span>Menu</span></a>
+</div -->
+
+<div class="page-content">
+
+  <div class="page-title page-title-fixed" style="background:white">
+      <h1><a href="/" ><img src="/img/logo.png" class="logo"></a></h1>
+
+
+        <a class="page-title-icon color-theme" style="width:50px" href="/cart">
+          <i class="fa fa-shopping-cart"></i>
+            <span class="badge bg-primary cart-update" id="cart-update3">1</span>
+</a>
+        <a class="page-title-icon color-theme" href="/profile">
+          <i class="fa fa-user"></i>
+</a>
+
+      <a href="#" class="page-title-icon color-theme" data-menu="menu-main-right"><i class="fa fa-bars"></i></a>
+    
+  </div>
+
+      <form action="/products" accept-charset="UTF-8" method="get">
+      <div class="search-box2 search-dark shadow-xl border-0 bg-theme rounded-sm bottom-0" >
+        <i class="fa fa-search"></i>
+         <input placeholder="Cerca la tua acqua" class="border-0" type="text" name="search[general]" id="search_general" />
+      </div>
+</form>   
+  <div class="search-box search-dark shadow-xl border-0 bg-theme rounded-sm bottom-0" style="display:none">
+    <i class="fa fa-search"></i>
+    <input type="text" class="border-0" placeholder="Cerca la tua acqua " data-search="">
+  </div>
+<div class="search-results disabled-search-list">
+<div class="list-group list-custom-large card card-style p-3">
+<a href="#" data-filter-item data-filter-name="all demo smartphone apple iphone ios">
+<i class="fab fa-apple color-gray-dark"></i>
+<span>Apple</span>
+<strong>Works on iOS 10 and Higher</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+<a href="#" data-filter-item data-filter-name="all demo smartphone samsung android htc oneplus">
+<i class="fab fa-android color-green-dark"></i>
+<span>Android</span>
+<strong>Works on Android 5.1.1 and Higher</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+<a href="#" data-filter-item data-filter-name="all demo code css3 css">
+<i class="fab fa-css3 color-blue-dark font-17"></i>
+<span>CSS3 </span>
+<strong>Beautiful Design. Simple Code.</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+<a href="#" data-filter-item data-filter-name="fox all demo code html5 html">
+<i class="fab fa-html5 color-orange-dark"></i>
+<span>HTML5 </span>
+<strong>Powerful and Universally Compatible</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+<a href="#" data-filter-item data-filter-name="all demo support help">
+<i class="fa fa-life-ring color-red-dark font-17"></i>
+<span>Support </span>
+<strong>Elite Quality, 24/7 Support for Buyers</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+<a href="#" data-filter-item data-filter-name="all demo code js jquery java javascript">
+<i class="fab fa-js color-yellow-dark font-17"></i>
+<span>JavaScript </span>
+<strong>Clean Code, Easy to Use and Modify</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+<a href="#" data-filter-item data-filter-name="all demo support elite help documentation">
+<i class="fa fa-file color-gray-dark font-17"></i>
+<span>Documentation </span>
+<strong>Every Feature and Aspect Covered.</strong>
+<i class="fa fa-angle-right"></i>
+</a>
+</div>  
+</div>
+
+
+    <div id='flash'></div>
+  <div class="divider divider-margins"></div> 
+
+
+<div class="splide single-slider slider-no-arrows slider-dots" id="single-slider-2">
+    <div class="splide__track">
+    <div class="splide__list">
+        <div class="splide__slide ">
+
+            <div class="card card-home card-style-home bg-home" id="home-cta" data-card-height="262">
+                <div class="card-bottom text-center">
+                <div class="mb-3 color-white">
+                    <a class="btn btn-l font-700 font-13 btn-white mt-4 no-rounded" href="/products">CATALOGO</a>
+                </div>
+                </div>
+            </div>
+        
+        </div>
+        <div class="splide__slide ">
+
+            <div class="card card-home card-style-home bg-home2" id="home-cta2" data-card-height="262">
+                <div class="card-bottom text-center">
+                </div>
+            </div>
+        
+        </div>
+        <div class="splide__slide ">
+
+            <div class="card card-home card-style-home bg-home3" id="home-cta3" data-card-height="262">
+                <div class="card-bottom text-center">
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="card card-home card-style-home">
+
+<div class="divider"></div>
+<p style="text-align:center">
+WaterClub é il servizio di <b>home delivery per acqua minerale</b> nato per semplificarti la vita in modo <b>etico e sostenibile</b>. Ordina dallo smartphone la tua acqua in vetro, in lattina, in bric o in plastica 100% riciclata. Te la consegneremo nel rispetto dell'ambiente con i furgoncini Waterclub a <b>zero emissioni</b>, quando e dove vuoi. 
+</p>
+
+<div class="divider"></div>
+
+<h1>Come funziona</h1>
+
+<div id="servizio">
+<div class="row">
+    <div class="col-6">
+        <img width="100%" class="rounded-m " src="/images/pictures/STEP-01.jpg">
+    </div>
+    <div class="col-6">
+            <h5>1</h5>
+            Scarica l’APP sul tuo smartphone e scopri subito se il servizio è attivo nella tua <b>zona</b>.
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-6" style="text-align:right">
+        <h5>2</h5>
+        Trova l’acqua <b>più adatta a te</b> e alla tua famiglia. <b>Se preferisci, sceglila direttamente</b> sul nostro catalogo
+    </div>
+    <div class="col-6">
+        <img width="100%" class="rounded-m " src="/images/pictures/STEP-02.jpg">
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <img width="100%" class="rounded-m " src="/images/pictures/STEP-03.jpg">
+    </div>
+    <div class="col-6">
+        <h5>3</h5>
+        Scopri i nostri servizi: <b>Ordine singolo o ricorrente "ogni settimana a casa tua"</b>.
+Quale <b>preferisci</b>?
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-6" style="text-align:right">
+        <h5>4</h5>
+        Scarica la APP Waterclub sul tuo smartphone e scopri subito se il servizio è attivo nella tua zona.
+    </div>
+    <div class="col-6">
+        <img width="100%" class="rounded-m " src="/images/pictures/STEP-04.jpg">
+    </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+<br/>
+
+
+
+
+
+</div>
+
+<div class="divider mb-3"></div>
+
+<div ><div class="card">
+<div class="text-center">
+  <img style="width: 100px;border-radius:10px;margin-top:10px" src="https://shop-waterclub.cf04.aclambda.online/app/icons/w-icon-144x144.png" alt="" />
+</div>
+<p class="boxed-text-l mb-4">
+
+</p>
+<div class="text-center mb-4">
+<a href="#" class="icon icon-xs rounded-sm shadow-l mr-1 bg-instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" class="icon icon-xs rounded-sm shadow-l mr-1 bg-facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" class="icon icon-xs rounded-sm shadow-l mr-1 bg-twitter"><i class="fab fa-twitter"></i></a>
+<a href="mailto:info@waterclub.it" class="icon icon-xs rounded-sm shadow-l mr-1 bg-envelope"><i class="fa fa-envelope font-12 bg-mail color-white shadow-l rounded-s"></i></a>
+<a href="https://wa.me/393517576141" class="icon icon-xs rounded-sm shadow-l mr-1 bg-whatsapp"><i class="fab fa-whatsapp"></i></a>
+</div>
+<div class="divider mb-3"></div>
+
+<div class="text-center">
+<a class="font-11 col-md-3" href="https://shop-waterclub.cf04.aclambda.online/privacypolicy">Privacy Policy</a> |
+<a class="font-11 col-md-3" href="mailto:info@waterclub.it">Contact Support</a><br/>
+<a class="font-11 col-md-3" href="https://wa.me/393517576141">Whatsapp</a><br/>
+<a class="font-11 col-md-3" href="https://shop-waterclub.cf04.aclambda.online/tc">Terms of Service</a> |
+<a class="font-11 col-md-3" href="https://shop-waterclub.cf04.aclambda.online/cookiepolicy">Cookie Policy</a> |
+<a class="font-11 col-md-3" href="#" onClick="deleteCookie('GlowCookies');window.location.reload();">Gestisci Cookie</a> |
+</div>
+
+
+</div>
+
+
+</body>
+</html>
