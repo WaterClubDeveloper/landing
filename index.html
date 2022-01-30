@@ -1,25 +1,19 @@
+<!doctype html>
+<html lang="en">
 
-<!DOCTYPE html>
-<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-  <meta name="full-screen" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="WaterClub">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="icon" type="image/png" href="/app/icons/favicon.png">
-  <link rel="manifest" href="/_manifest.json" data-pwa-version="3.10">
-  <link rel="apple-touch-icon" sizes="180x180" href="/app/icons/w-icon-192x192.png">
-  <title>WaterClub</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
-  <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="A6LDmWAOo2sfXFXycy9PX-tXIMHkyhcF_PteOatStkK16H9IlP7DkmzL5-6oWI3R69sYQidoq6WsAKHJUrsK9g" />
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <title>Layout</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <script src="https://shop-waterclub.cf04.aclambda.online/cookie/glowCookies.js"></script>
 
@@ -61,293 +55,11 @@
     }
 </script>
 
-  <!-- Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 -->
-  <!-- desktop -->
-  <style>
+</head>
 
-.splide__pagination{
-  bottom:-1.5em;
-}
-  .categories-home {
-    color: white; 
-  }
+<body>
 
-  .bg-home {
-    background-image: url(/img/home_dsk.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  
-  .bg-home2 {
-    background-image: url(/img/home2.jpg);
-    background-size: contain;
-    margin-top: 0px;
-    background-repeat: no-repeat;
-}
-
-.bg-home3 {
-    background-image: url(/img/home3.jpg);
-    background-size: contain;
-    margin-top: 0px;
-    background-repeat: no-repeat;
-}
-
-.card-style-home {
-  margin:0px;
-}
-
-  .divider-margins{
-    margin-top:-5px;
-  }
-
-  .home-text {
-    color: #000000;
-    font-size:24px;
-  }
-
-  .page-title {
-    border-radius: 5px 5px 0pc 0px;
-  }
-
-  #page{
-    background:inherit;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
-    position: relative;
-    margin-top:10px;
-  }
-  #page:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-    filter: blur(10px);
-    margin: -20px;
-  }
-
-body {
-  margin: 0;
-}
-
-.breadcrumb-item a, .breadcrumb-item.active, .breadcrumb-item + .breadcrumb-item::before {
-  color: white !important;
-}
-
-.add-btn{
-    float: none !important;
-    margin-right: 0px;
-}
-
-.stepper-list {
-    float: none !important;
-    margin-right: 0px;
-}
-
-@keyframes animateSprite {
-  0% {
-    background-position: -600px; /* Starting position moving left sprite */
-  }
-  20% {
-    background-position: 0px; /* Straight on sprite */
-  }
-  25% {
-    background-position: -200px; /* Moving up sprite */
-  }
-  35% {
-    background-position: -400px; /* Moving right sprite */
-  }
-  40% {
-    background-position: -400px;
-  }
-  50% {
-    background-position: -200px;  /* Moving up sprite */
-  }
-  60% {
-    background-position: -0px; /* Straight on sprite */
-  }
-  67% {
-    background-position: -600px; /* Moving up sprite */
-  }
-
-  100% {
-    background-position: -600px;
-  }
-}
-
-@keyframes swim {
-  0% {
-    transform: translate(0, 0); /* Starting position */
-  }
-  20% {
-    transform: translate(calc(-50vw - 100px), 0); /* Animate to center of screen */
-  }
-  25% {
-    transform: translate(calc(-50vw - 100px), 0); /* Stay at the center for 1 second */
-  }
-  35% {
-    transform: translate(calc(-50vw - 100px), -20vh); /* Animate up for 2 seconds */
-  }
-  50% {
-    transform: translate(-25vw, 15vh); /* Animate bottom right for 3 seconds */
-  }
-  60% {
-    transform: translate(-25vw, -20vh); /* Animate up at right of the screen */
-  }
-  67% {
-    transform: translate(-25vw, -20vh);
-  }
-
-  100% {
-    transform: translate(calc(-100vw - 300px), 0); /* Animate past left past the screen */
-  }
-}
-
-.ocean {
-  position: absolution;
-  width: 100vw;
-  height: 100%;
-  background-image: linear-gradient(0deg, #182848, #2980b9)
-}
-
-.bubble {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  position: absolute;
-  background-color: white;
-  bottom: -30px;
-  opacity: 0.2;
-  animation: bubble 15s ease-in-out infinite,
-    sideWays 4s ease-in-out infinite alternate;
-}
-
-@keyframes bubble {
-  0% {
-    transform: translateY(0%);
-    opacity: 0.06;
-  }
-  100% {
-    transform: translateY(-120vh);
-  }
-}
-
-@keyframes sideWays {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 200px;
-  }
-}
-
-.bubble--1 {
-  left: 10%;
-  animation-delay: 0.5s;
-  animation-duration: 16s;
-  opacity: 0.2;
-}
-
-.bubble--2 {
-  width: 15px;
-  height: 15px;
-  left: 40%;
-  animation-delay: 1s;
-  animation-duration: 10s;
-  opacity: 0.1;
-}
-
-.bubble--3 {
-  width: 10px;
-  height: 10px;
-  left: 30%;
-  animation-delay: 5s;
-  animation-duration: 20s;
-  opacity: 0.3;
-}
-
-.bubble--4 {
-  width: 25px;
-  height: 25px;
-  left: 40%;
-  animation-delay: 8s;
-  animation-duration: 17s;
-  opacity: 0.2;
-}
-
-.bubble--5 {
-  width: 30px;
-  height: 30px;
-  left: 60%;
-  animation-delay: 10s;
-  animation-duration: 15s;
-  opacity: 0.1;
-}
-
-.bubble--6 {
-  width: 10px;
-  height: 10px;
-  left: 80%;
-  animation-delay: 3s;
-  animation-duration: 30s;
-  opacity: 0.4;
-}
-
-.bubble--7 {
-  width: 15px;
-  height: 15px;
-  left: 90%;
-  animation-delay: -7s;
-  animation-duration: 25s;
-  opacity: 0.3;
-}
-
-.bubble--9 {
-  width: 20px;
-  height: 20px;
-  left: 50%;
-  bottom: 30px;
-  animation-delay: -5s;
-  animation-duration: 19s;
-  opacity: 0.2;
-}
-
-.bubble--10 {
-  width: 40px;
-  height: 40px;
-  left: 30%;
-  bottom: 30px;
-  animation-delay: -21s;
-  animation-duration: 16s;
-  opacity: 0.3;
-}
-
-.bubble--11 {
-  width: 30px;
-  height: 30px;
-  left: 60%;
-  bottom: 30px;
-  animation-delay: -13.75s;
-  animation-duration: 20s;
-  opacity: 0.3;
-}
-
-.bubble--11 {
-  width: 25px;
-  height: 25px;
-  left: 90%;
-  bottom: 30px;
-  animation-delay: -10.5s;
-  animation-duration: 19s;
-  opacity: 0.3;
-}
-
-  </style>
-<meta name="apple-mobile-web-app-capable" content="yes"></head>
-
-<body class="theme-light">
+   
 
  <div class="ocean">
   <div class="bubble bubble--1"></div>
@@ -599,6 +311,8 @@ Quale <b>preferisci</b>?
 
 
 </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
 </body>
